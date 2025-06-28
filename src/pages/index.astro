@@ -1,11 +1,30 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import UserSection from "@/components/user-section";
+import { UserService } from "@/domains/services/user";
+import type { ServiceResultType } from "@/domains/types/service-result";
+import type { UserType } from "@/domains/types/user";
+import { UserRepository } from "@/infrastructure/repositories/user";
+import Layout from "@/layouts/index.astro";
+import { Alert } from "@heroui/react";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const repository: UserRepository = new UserRepository();
+const service: UserService = new UserService(repository);
+const response: ServiceResultType<UserType[], Error> = await service.getAll();
 ---
 
-<Layout>
-	<Welcome />
+<Layout title={"AstroApp - Usuários"}>
+  {
+    !response.success && (
+      <section class="pt-10">
+        <Alert
+          color="danger"
+          title="Ops! Aconteceu um erro ao buscar as unidades."
+          description={response.error.message}
+          variant="faded"
+        />
+      </section>
+    )
+  }
+
+  {response.success && <UserSection users={response.data} client:visible />}
 </Layout>

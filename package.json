@@ -1,15 +1,38 @@
 {
-  "name": "teste-temp",
+  "name": "astroapp",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Matheus R. Oliveira",
   "type": "module",
-  "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "start": "astro preview"
+    "start": "astro preview",
+    "db:up": "tsx --no-warnings ./node_modules/knex/bin/cli.js --knexfile knexfile.ts --env postgres migrate:latest",
+    "db:make": "tsx --no-warnings ./node_modules/knex/bin/cli.js --knexfile knexfile.ts --env postgres migrate:make"
   },
   "dependencies": {
     "@astrojs/node": "^9.2.2",
-    "astro": "^5.8.0"
+    "@astrojs/react": "^4.3.0",
+    "@heroui/react": "^2.8.0-beta.5",
+    "@tailwindcss/vite": "^4.1.7",
+    "astro": "^5.8.0",
+    "dotenv": "^16.5.0",
+    "knex": "^3.1.0",
+    "pg": "^8.16.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5",
+    "prettier": "3.5.3",
+    "prettier-plugin-astro": "0.14.1",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "@vite-pwa/astro": "^1.1.0"
   }
 }
