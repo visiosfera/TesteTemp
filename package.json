@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "astro": "astro"
+    "preview": "astro preview",
+    "start": "astro preview"
   },
   "dependencies": {
     "astro": "^5.10.1"
