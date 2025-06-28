@@ -17,7 +17,7 @@
     "@astrojs/react": "^4.3.0",
     "@heroui/react": "^2.8.0-beta.5",
     "@tailwindcss/vite": "^4.1.7",
-    "astro": "^5.8.0",
+    "astro": "^5.10.1",
     "dotenv": "^16.5.0",
     "knex": "^3.1.0",
     "pg": "^8.16.0",
@@ -32,7 +32,6 @@
     "prettier": "3.5.3",
     "prettier-plugin-astro": "0.14.1",
     "tsx": "^4.19.4",
-    "typescript": "^5.8.3",
-    "@vite-pwa/astro": "^1.1.0"
+    "typescript": "^5.8.3"
   }
 }
