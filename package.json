@@ -9,6 +9,7 @@
     "start": "astro preview"
   },
   "dependencies": {
+    "@astrojs/node": "^9.2.2",
     "astro": "^5.10.1"
   }
 }
