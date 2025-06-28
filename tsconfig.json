@@ -1,29 +1,5 @@
 {
+  "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"],
-  "compilerOptions": {
-    "lib": ["ES2023", "DOM"],
-    "target": "ES2023",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "react",
-    "strictPropertyInitialization": false,
-    "baseUrl": ".",
-    "types": [],
-    "paths": {
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/domains/*": ["./src/domains/*"],
-      "@/infrastructures/*": ["./src/infrastructures/*"],
-      "@/layouts/*": ["./src/layouts/*"],
-      "@/pages/*": ["./src/pages/*"],
-      "@/shared/*": ["./src/shared/*"]
-    },
-    "verbatimModuleSyntax": true
-  }
+  "exclude": ["dist"]
 }
