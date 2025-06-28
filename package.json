@@ -1,16 +1,14 @@
 {
-  "name": "astroapp",
+  "name": "site-visiosfera",
   "version": "1.0.0",
   "license": "MIT",
-  "author": "Matheus R. Oliveira",
+  "author": "Ermano Martins de Sousa",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "start": "astro preview",
-    "db:up": "tsx --no-warnings ./node_modules/knex/bin/cli.js --knexfile knexfile.ts --env postgres migrate:latest",
-    "db:make": "tsx --no-warnings ./node_modules/knex/bin/cli.js --knexfile knexfile.ts --env postgres migrate:make"
+    "start": "astro preview"
   },
   "dependencies": {
     "@astrojs/node": "^9.2.2",
